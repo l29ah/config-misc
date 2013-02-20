@@ -1,0 +1,62 @@
+! Logitech Deluxe 250-specific
+!keycode 94 = Shift_L
+!add shift = Shift_L
+
+! KB-M102-specific
+!keycode 94 = Hyper_L Hyper_L
+!add mod4 = Hyper_L
+!keycode 113 = Multi_key
+
+! Chicony KKB-5161-specific
+!clear mod1
+!keycode 64 = Hyper_L
+!clear control
+!keycode 109 = Multi_key
+!add control = Control_L
+
+! VIST-specific
+clear mod1
+keycode 64 = Hyper_L
+clear control
+keycode 105 = Multi_key
+add control = Control_L
+
+! uim key
+!keycode 116 = Super_R
+
+! make a window manager key
+!keycode 115 = Hyper_L
+clear mod4
+add mod4 = Hyper_L
+
+! swap Caps Lock and Control_L
+!keycode 37 = ISO_Next_Group Caps_Lock ISO_Next_Group Caps_Lock
+!keycode 66 = Control_L
+!clear shift
+!add shift = Shift_L
+!add shift = Shift_R
+!clear control
+!add control = Control_L
+!add control = Control_R
+!clear lock
+!add lock = ISO_Next_Group
+
+! I want this kawaii asterisk on the typewriter layout!
+keycode 49 = grave asciitilde asterisk plus
+
+! qemu sucks
+!keycode 113 = Alt_L
+keycode 108 = Alt_L
+
+! hedgewars sucks
+keycode 62 = Shift_L
+keycode 50 = Shift_R
+
+! my broken l300 keyboard
+!keycode 75 = 8 asterisk underscore 8
+!keycode 76 = 9 parenleft question 9
+!keycode 95 = 0 parenright percent 0
+!keycode 96 = minus underscore exclam equal
+
+clear mod1
+add mod1 = Alt_L

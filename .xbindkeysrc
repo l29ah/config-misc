@@ -1,0 +1,89 @@
+# Essentials
+
+"xautolock -locknow; sleep 5; xset dpms force off"
+	mod4 + Shift + Control + L
+
+"evilvte"
+	mod4 + Control + Return
+
+"exec `dmenu_path | dmenu`"
+	mod4 + Shift + Control + P
+
+#"cd ~/.xmonad && hsc2hs xmonad.hsc && xmonad --recompile && xmonad --restart"
+"xmonad --recompile && xmonad --restart"
+	mod4 + Q
+
+#"cautoclick -p 400 -i 100 -n 20"
+#	mod4 + C
+
+
+# Sound-related stuff:
+
+#"amixer -c 0 set Master 2%+"
+#"ossmix misc.front1 -- +1"
+"ossmix vmix0-outvol -- +0.5"
+	mod4 + Up
+	XF86AudioRaiseVolume
+#"amixer -c 0 set Master 2%-"
+#"ossmix misc.front1 -- -1"
+"ossmix vmix0-outvol -- -0.5"
+	mod4 + Down
+	XF86AudioLowerVolume
+#"ossmix `pcmof mpd` -- +0.5"
+#	mod4 + Shift + Up
+#"ossmix `pcmof mpd` -- -0.5"
+#	mod4 + Shift + Down
+"mpc seek +00:00:10"
+	mod4 + Shift + Right
+"mpc seek -00:00:10"
+	mod4 + Shift + Left
+"mpc seek +00:01:00"
+	mod4 + Shift + Up
+"mpc seek -00:01:00"
+	mod4 + Shift + Down
+
+"mpc next"
+	mod4 + Shift + N
+	XF86AudioNext
+
+#"amixer set Master toggle"
+"ossmix misc.front-mute TOGGLE"
+	mod4 + Shift + M
+	XF86AudioMute
+
+"mt"
+	mod4 + Shift + T
+	
+"mpc toggle"
+	mod4 + Shift + P
+	XF86AudioPlay
+
+# Clipboard
+"xsel -x"
+	mod4 + x
+"p=`xsel -p -o`; xsel -b -o | xsel -p -i; echo -n "$p" | xsel -b -i;"
+	mod4 + c
+
+# Browsers
+"dillo `xclip -o`"
+	mod4 + d
+
+"firefox `xclip -o`"
+	mod4 + f
+
+"/home/l29ah/bin/uzbl `xclip -o`"
+	mod4 + u
+
+# Misc
+#"xdg-open `xclip -o`"
+#	mod4 + U
+
+"xkill"
+	mod4 + Control + K
+
+"xcalib -i -a"
+	mod4 + Shift + I
+
+"screenshot-web `dmenu` | xclip -i"
+	mod4 + S
+
