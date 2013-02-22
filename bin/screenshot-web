@@ -1,0 +1,5 @@
+#!/bin/bash
+FN="screenshot-$1.png"
+xwd -root | xwdtopnm | pnmtopng > "/tmp/$FN"
+optipng "/tmp/$FN"
+dumpcheese "/tmp/$FN" | tee -a /tmp/screenshot-log
