@@ -32,6 +32,7 @@ show_graph_scale no
 show_graph_range no
 
 TEXT
+$time
 ${color grey}BTC:$color $$${execi 300 curl -s https://mtgox.com/api/0/data/ticker.php | sed -e 's#.*last":\([^,]*\),.*#\1#'} ${color grey}Moscow:$color ${execi 600 gismeteo-now}°C
 $hr
 ${color grey}RAM Usage:$color $mem/$memmax - $memperc% ${membar 4}
