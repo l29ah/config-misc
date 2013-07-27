@@ -3,3 +3,5 @@
 	name = Sergey Alirzaev
 [push]
 	default = simple
+[color]
+	ui = auto
