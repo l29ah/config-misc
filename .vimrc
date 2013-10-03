@@ -4,3 +4,7 @@ set mouse=a
 autocmd FileType cabal setlocal expandtab
 
 set list listchars=tab:»·,trail:·
+
+" disable shitty vim regex syntax
+nnoremap / /\v
+vnoremap / /\v
