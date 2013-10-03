@@ -1,5 +1,6 @@
 #!/bin/bash
 . /etc/profile
+. ~/.profile
 #setxkbmap -option 'compose:menu'
 #xset m 2 0	# 800dpi
 xset m 1 0	# 2000dpi
@@ -11,8 +12,6 @@ xset r rate 225 50 # vim-friendly fast repeat
 #export QT_IM_MODULE=uim
 #uim-xim &
 #export XMODIFIERS=@im=uim
-#export BROWSER=uzbl
-export BROWSER=firefox
 
 eval $(gpg-agent --daemon --default-cache-ttl 3600 --max-cache-ttl 28800)
 
