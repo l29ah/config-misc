@@ -1,6 +1,7 @@
 #!/bin/bash
 . /etc/profile
 . ~/.profile
+[[ -e ~/.xsession.local ]] && ~/.xsession.local
 #setxkbmap -option 'compose:menu'
 #xset m 2 0	# 800dpi
 xset m 1 0	# 2000dpi
@@ -46,9 +47,9 @@ fi
 #setkeymap ru
 keyboard-setup
 xbindkeys
-# Touchpad-based laptop
-#synclient MaxSpeed=5 CircularScrolling=0 VertEdgeScroll=0 VertTwoFingerScroll=1 EmulateTwoFingerMinW=8 EmulateTwoFingerMinZ=1
-# Trackpoint-based laptop
-synclient VertTwoFingerScroll=1 HorizTwoFingerScroll=1 EmulateTwoFingerMinW=0 EmulateTwoFingerMinZ=1
+[[ -v xs_touchpad ]] && synclient MaxSpeed=5 CircularScrolling=0 VertEdgeScroll=0 VertTwoFingerScroll=1 EmulateTwoFingerMinW=8 EmulateTwoFingerMinZ=1
+[[ -v xs_trackpoint ]] && synclient VertTwoFingerScroll=1 HorizTwoFingerScroll=1 EmulateTwoFingerMinW=0 EmulateTwoFingerMinZ=1
 #transmission-gtk &
+# Allow for root connections
+xhost +SI:localuser:root
 sleep 1000d

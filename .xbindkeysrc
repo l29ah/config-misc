@@ -6,7 +6,7 @@
 "evilvte"
 	mod4 + Control + Return
 
-"exec `dmenu_path | dmenu`"
+"dmenu_run"
 	mod4 + Shift + Control + P
 
 #"cd ~/.xmonad && hsc2hs xmonad.hsc && xmonad --recompile && xmonad --restart"
@@ -87,3 +87,5 @@
 "screenshot-web `dmenu` | xclip -i"
 	mod4 + S
 
+"passclip `dmenu`"
+	mod4 + C
