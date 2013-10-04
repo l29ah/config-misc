@@ -88,4 +88,4 @@
 	mod4 + S
 
 "passclip `dmenu`"
-	mod4 + C
+	mod4 + Control + C
