@@ -14,7 +14,7 @@ xset r rate 225 50 # vim-friendly fast repeat
 #uim-xim &
 #export XMODIFIERS=@im=uim
 
-eval $(gpg-agent --daemon --default-cache-ttl 3600 --max-cache-ttl 28800)
+eval $(gpg-agent --daemon)
 
 xmonad &
 #xscreensaver &
