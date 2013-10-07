@@ -185,7 +185,6 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <p> <p> : "☮" U262E # peace
 <Multi_key> <3> <less> : "♡"
 <Multi_key> <3> <3> : "☘" U2618 # трилистник
-#<Multi_key> <asciitilde> <asciitilde> : "☙" U2619 # завитушка
 <Multi_key> <w> <a> : "⚠" U26A0 # внимание
 <Multi_key> <b> <h> : "☣" U2623 # биохазард!
 <Multi_key> <r> <a> : "☢" U2622 # радиоактивность!!
@@ -268,14 +267,15 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 
 <Multi_key> <?> <!> : "⁈" U2048 # QUESTION EXCLAMATION, ?!
 <Multi_key> <!> <?> : "⁉"
-<Multi_key><underscore><a> : "ₐ" 
-<Multi_key> <-> <-> <,> : "‐" U2010 #человеческий дефис
+<Multi_key> <underscore><a> : "ₐ" 
+<Multi_key> <minus> <minus> <comma> : "‐" U2010 #человеческий дефис
 <Multi_key> <w> <w> : "ʬ"
 <Multi_key> <1> <slash> : "⅟" U215F # FRACTION NUMERATOR ONE
 <Multi_key> <parenleft> <colon> : "☻"
 <Multi_key> <r> <i> <p> : "†"
 <Multi_key> <s> <k> : "☠"
 <Multi_key> <0> <0> : "ⵓ"
+<Multi_key> <asciitilde> <asciitilde>: "〰" U3030 # WAVY DASH
 
 # misc
 <Multi_key><colon><p> : ":þ"
