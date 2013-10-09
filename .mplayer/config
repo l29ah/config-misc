@@ -1,0 +1,28 @@
+subcp = enca:ru:cp1251
+alang=jpn
+ass = 1
+font = 'DejaVu Sans'
+fs = 0
+#af = hrtf
+#vf = ass,screenshot
+#vf-add = expand=::0:0:1:4/3
+#vf-add = expand=::0:0:1:16/10
+vo = xv	# gl* segfaults
+#vo = gl
+#vo = gl2
+fontconfig = 1
+subpos = 100
+msgcolor = 1
+prefer-ipv4 = 1
+cache = 10000
+cache-min = 5
+
+# Alsa crap
+#softvol = 1
+
+# OSS crap
+#abs = 16384
+ao = oss
+ao = oss:/dev/dsp0
+srate = 48000 
+#srate = 44100
