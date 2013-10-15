@@ -1,0 +1,28 @@
+style "default"
+{
+    bg[NORMAL]        = "#333333"
+    bg[ACTIVE]        = "#000000"
+    bg[PRELIGHT]      = "#505075"
+    bg[SELECTED]      = "#505075"
+    bg[INSENSITIVE]   = "#444444"
+
+    fg[NORMAL]        = "#dddddd"
+    fg[ACTIVE]        = "#ffffff"
+    fg[PRELIGHT]      = "#f4f4f4"
+    fg[SELECTED]      = "#f4f4f4"
+    fg[INSENSITIVE]   = "#999999"
+
+    base[NORMAL]      = "#333333"
+    base[ACTIVE]      = "#999999"
+    base[PRELIGHT]    = "#505075"
+    base[SELECTED]    = "#505075"
+    base[INSENSITIVE] = "#444444"
+
+    text[NORMAL]      = "#dddddd"
+    text[ACTIVE]      = "#ffffff"
+    text[PRELIGHT]    = "#f4f4f4"
+    text[SELECTED]    = "#f4f4f4"
+    text[INSENSITIVE] = "#999999"
+}
+
+class "GtkWidget" style "default"
