@@ -6,6 +6,7 @@
 #xset m 2 0	# 800dpi
 xset m 1 0	# 2000dpi
 xset r rate 225 50 # vim-friendly fast repeat
+xset dpms 0 0 600
 #xsetroot -solid black
 
 # uim kludges
@@ -14,7 +15,11 @@ xset r rate 225 50 # vim-friendly fast repeat
 #uim-xim &
 #export XMODIFIERS=@im=uim
 
-eval $(gpg-agent --daemon)
+gpg-agent --daemon
+. ~/.gpg-agent-info
+export GPG_AGENT_INFO
+export SSH_AUTH_SOCK
+export SSH_AGENT_PID
 
 xmonad &
 #xscreensaver &
@@ -35,7 +40,7 @@ evilvte &
 #uzbl-event-manager -va start
 #sleep 7 # TODO wait for the internets
 pgrep wish >/dev/null || {
-	#tkabber &
+	tkabber &
 	#psi-plus &
 	echo $DISPLAY > ~/.config/display
 }
