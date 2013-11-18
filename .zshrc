@@ -52,7 +52,7 @@ fi
 alias grep='grep --colour=auto'
 alias ls='ls --color=auto'
 
-setopt histignoredups incappendhistory
+setopt histignoredups incappendhistory hist_ignore_space
 
 case "$TERM" in
         xterm)
@@ -83,4 +83,3 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILE=~/.zhistory
 setopt inc_append_history
-
