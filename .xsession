@@ -1,11 +1,10 @@
 #!/bin/bash
 . /etc/profile
 . ~/.profile
-[[ -e ~/.xsession.local ]] && ~/.xsession.local
+[[ -e ~/.xsession.local ]] && . ~/.xsession.local
 #setxkbmap -option 'compose:menu'
 #xset m 2 0	# 800dpi
 xset m 1 0	# 2000dpi
-xset r rate 225 50 # vim-friendly fast repeat
 xset dpms 0 0 600
 #xsetroot -solid black
 
