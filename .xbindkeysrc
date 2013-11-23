@@ -3,7 +3,7 @@
 "xautolock -locknow; sleep 5; xset dpms force off"
 	mod4 + Shift + Control + L
 
-"urxvt"
+"evilvte"
 	mod4 + Control + Return
 
 "dmenu_run"
