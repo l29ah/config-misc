@@ -51,7 +51,7 @@ fi
 #setkeymap ru
 keyboard-setup
 xbindkeys
-[[ -v xs_touchpad ]] && synclient MaxSpeed=5 CircularScrolling=0 VertEdgeScroll=0 VertTwoFingerScroll=1 EmulateTwoFingerMinW=8 EmulateTwoFingerMinZ=1
+[[ -v xs_touchpad ]] && synclient MaxSpeed=5 CircularScrolling=0 VertEdgeScroll=0 VertTwoFingerScroll=1 EmulateTwoFingerMinW=8 EmulateTwoFingerMinZ=1 && xinput set-int-prop 11 303 8 1 && xinput set-int-prop 11 307 8 2
 [[ -v xs_trackpoint ]] && synclient VertTwoFingerScroll=1 HorizTwoFingerScroll=1 EmulateTwoFingerMinW=0 EmulateTwoFingerMinZ=1
 #transmission-gtk &
 # Allow for root connections
