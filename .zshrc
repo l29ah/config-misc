@@ -44,9 +44,9 @@ zle -N zle-line-init
 bindkey -v
 
 if [[ ${EUID} == 0 ]] ; then
-	PS1="%B%F{red}%m %B%F{blue}%~ ∞%b%f %F{white}"
+	PS1="%B%F{red}${zshhostPS1:-%m} %B%F{blue}%~ ∞%b%f %F{white}"
 else
-	PS1="%B%F{magenta}%n%F{white}Z%F{magenta}%m %B%F{blue}%~ ‰%b%f %F{white}"
+	PS1="%B%F{magenta}%n%F{white}Z%F{magenta}${zshhostPS1:-%m} %B%F{blue}%~ ‰%b%f %F{white}"
 fi
 
 alias grep='grep --colour=auto'
