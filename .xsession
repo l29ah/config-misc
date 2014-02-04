@@ -22,7 +22,7 @@ export SSH_AGENT_PID
 
 xmonad &
 #xscreensaver &
-xautolock -time 15 -locker 'i3lock -i ~/locker.png' &
+xautolock -time 15 -locker 'i3lock -i ~/wallpapers/c.png' &
 twmnd &
 conky -q -d
 #unclutter -idle 3 -jitter 1 &
