@@ -13,9 +13,6 @@
 "xmonad --recompile && xmonad --restart"
 	mod4 + Q
 
-#"cautoclick -p 400 -i 100 -n 20"
-#	mod4 + C
-
 
 # Sound-related stuff:
 
