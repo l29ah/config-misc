@@ -1,0 +1,4 @@
+set complete=tlsf
+source! /home/l29ah/.vimperatorrc.local
+
+" vim: set ft=vimperator:
