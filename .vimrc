@@ -1,4 +1,4 @@
-set clipboard=unnamedplus,autoselect
+set clipboard=unnamed,autoselect
 set modeline
 set mouse=a
 set incsearch
