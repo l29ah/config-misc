@@ -2,7 +2,7 @@ set clipboard=unnamed,autoselect
 set modeline
 set mouse=a
 set incsearch
-set rnu
+"set rnu
 " set Haskell indent
 "autocmd FileType haskell setlocal expandtab shiftwidth=8 softtabstop=8
 autocmd FileType cabal setlocal expandtab
