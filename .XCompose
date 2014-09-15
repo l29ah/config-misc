@@ -107,6 +107,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key><KP_7> : "↖" U2196 # NORTH WEST ARROW
 <Multi_key><KP_8> : "↑" U2191 # UPWARDS ARROW
 <Multi_key><KP_9> : "↗" U2197 # NORTH EAST ARROW
+<Multi_key><z><z> : "⇄" U21C4 # RIGHTWARDS ARROW OVER LEFTWARDS ARROW
 
 # Double
 <Multi_key> <less> <equal> 			: "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
