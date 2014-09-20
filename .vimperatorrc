@@ -1,4 +1,7 @@
 set complete=tlsf
+"set popups=window
+set gui=navigation,addons,tabs
+"nnoremap <S-P> P:tabdetach<CR>
 source! /home/l29ah/.vimperatorrc.local
 
 " vim: set ft=vimperator:
