@@ -61,4 +61,5 @@ xbindkeys
 #transmission-gtk &
 # Allow for root connections
 xhost +SI:localuser:root
+arbtt-capture -r 5
 sleep 1000d
