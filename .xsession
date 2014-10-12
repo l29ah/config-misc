@@ -22,11 +22,16 @@ export GPG_AGENT_INFO
 export SSH_AUTH_SOCK
 export SSH_AGENT_PID
 
-xmonad &
+#xmonad &
+~/.xmonad/xmonad-x* &
 #xscreensaver &
-xautolock -time 15 -locker 'i3lock -i ~/wallpapers/c.png' &
+xautolock -time 15 -locker 'i3lock -T --color 55ff55 -i ~/wallpapers/c.png' &
 twmnd &
-conky -q -d
+#LANG=ru_RU.UTF-8 conky -q -d
+urxvt -title dzencontent -e dzencontent &
+urxvt -title pinger -e pinger &
+urxvt -title atop -e sudo atop 1 &
+urxvt -title syslog -e sudo tail -Fn 400 /var/log/everything/current &
 #unclutter -idle 3 -jitter 1 &
 
 # other shit
