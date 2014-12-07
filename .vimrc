@@ -2,8 +2,13 @@ set clipboard=unnamedplus,autoselectplus
 set modeline
 set mouse=a
 set incsearch
+
+execute pathogen#infect()
+
 "set rnu
-" set Haskell indent
+" set Haskell indentfiletype off                  " required
+
+
 "autocmd FileType haskell setlocal expandtab shiftwidth=8 softtabstop=8
 autocmd FileType cabal setlocal expandtab
 "au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
