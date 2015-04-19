@@ -1,5 +1,7 @@
 style "default"
 {
+    font_name = "Terminus 14"
+
     bg[NORMAL]        = "#333333"
     bg[ACTIVE]        = "#000000"
     bg[PRELIGHT]      = "#505075"
@@ -25,4 +27,4 @@ style "default"
     text[INSENSITIVE] = "#999999"
 }
 
-class "GtkWidget" style "default"
+widget_class "*" style "default"
