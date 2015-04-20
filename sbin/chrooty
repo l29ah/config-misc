@@ -1,4 +1,5 @@
 #!/bin/bash
+# the fastest one
 s=https://ftp-stud.hs-esslingen.de/pub/Mirrors/gentoo/
 #s=https://lug.mtu.edu/gentoo/
 #s=https://ftp.ucsb.edu/pub/mirrors/linux/gentoo/
@@ -17,4 +18,10 @@ mount -t sysfs sys sys &&
 mount -t devpts devpts dev/pts &&
 mkdir usr/portage &&
 mount -o bind /usr/portage usr/portage &&
+cp /etc/resolv.conf etc
+# make crossdev happy
+mkdir usr/local/portage
+echo 'PORTDIR_OVERLAY="/usr/local/portage $PORTDIR_OVERLAY"' >> etc/portage/make.conf
+echo 'MAKEOPTS="$MAKEOPTS -j5"' >> etc/portage/make.conf
+echo 'PORTAGE_NICENESS=15' >> etc/portage/make.conf
 chroot . /bin/bash
