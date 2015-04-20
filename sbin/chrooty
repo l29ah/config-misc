@@ -1,0 +1,20 @@
+#!/bin/bash
+s=https://ftp-stud.hs-esslingen.de/pub/Mirrors/gentoo/
+#s=https://lug.mtu.edu/gentoo/
+#s=https://ftp.ucsb.edu/pub/mirrors/linux/gentoo/
+u="$s/releases/amd64/autobuilds/current-stage3-amd64/"
+t=/tmp
+cd "$t"
+f="`curl -s "$u" | sed -ne 's#.*"\(stage3-[^"]*\)".*#\1#p' | sed q`"
+wget -c "$u/$f" &&
+mkdir -p "$1" &&
+cd "$1" &&
+tar -xpf "$t/$f" &&
+rm "$t/$f" &&
+mount -o bind /dev dev &&
+mount -t proc proc proc &&
+mount -t sysfs sys sys &&
+mount -t devpts devpts dev/pts &&
+mkdir usr/portage &&
+mount -o bind /usr/portage usr/portage &&
+chroot . /bin/bash
