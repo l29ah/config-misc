@@ -1,0 +1,4 @@
+#!/bin/sh
+what=`sed -s 's#.:.:\(.*\)-[0-9].*#\1#' /var/lib/module-rebuild/moduledb`
+echo $what
+cave resolve "$@" $what
