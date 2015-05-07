@@ -1,0 +1,10 @@
+#!/bin/sh
+r=`cat /sys/devices/platform/smapi/BAT0/remaining_running_time_now`
+case "$r" in
+	not_discharging) cat /sys/class/power_supply/BAT0/status;;
+	*) case `cat /sys/devices/platform/smapi/BAT0/barcoding` in
+		1ZFBM9851LX) r=$((r * 7 / 10));;
+	esac
+	echo $r;;
+esac
+#echo $((`cat /sys/class/power_supply/BAT0/energy_now` * 1000 / `cat /sys/class/power_supply/BAT0/power_now`))

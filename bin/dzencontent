@@ -6,6 +6,6 @@ done } &
 trap 'kill %1' EXIT
 echo '[?25l'	# hide the cursor
 while :; do
-	echo -n "CT:[31m$((`cat /sys/class/hwmon/hwmon0/temp1_input`/1000))°C[m OT:[32m`cat /tmp/weather`°C[m B:[34m`cat /sys/class/power_supply/BAT0/capacity`%[m,[33m`cat /sys/class/power_supply/BAT0/status`[m F:[35m`cat /sys/devices/platform/thinkpad_hwmon/fan1_input`RPM[m[J"
+	echo -n "CT:[31m$((`cat /sys/class/hwmon/hwmon0/temp1_input`/1000))°C[m OT:[32m`cat /tmp/weather`°C[m B:[34m`cat /sys/class/power_supply/BAT0/capacity`%[m,[33m`battery-time`[m F:[35m`cat /sys/devices/platform/thinkpad_hwmon/fan1_input`RPM[m[J"
 	sleep 2
 done
