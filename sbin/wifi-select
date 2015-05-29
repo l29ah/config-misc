@@ -35,7 +35,7 @@ exec 3>&1
 ESSID=$(dialog --menu "Choose network" 20 80 15 "${a[@]}" 2>&1 1>&3) || default
 [ -n "$ESSID" ] || fail
 if [[ "${keytype[$ESSID]}" == "on" ]]; then
-	passphrase=$(dialog --passwordbox "Enter password for $ESSID" 20 80 2>&1 1>&3)
+	passphrase=$(dialog --inputbox "Enter password for $ESSID" 20 80 2>&1 1>&3)
 	res=$(wpa_passphrase "$ESSID" "$passphrase") || {
 		e="$res; trying to connect anyway"
 		res="`perl -0777 -n -e 's/.*\n(network={\n.*?ssid="'"$ESSID"'".*?})/$1/ms and print' < "${conf}.default"`"
