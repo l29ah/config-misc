@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 while (<STDIN>) {
-	/^timestamp (.*?) jid (.*?) nick (.*?) body (.*?)( me \d)*$/;
+	/^.*?timestamp (.*?) jid (.*?) nick (.*?) body (.*?)( me \d)*$/;
 	($time, $nick, $body) = ($1, unescape($3), unescape($4));
 	$nick = "$nick: " if $nick;
 	print "$time] $nick$body\n";
