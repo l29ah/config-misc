@@ -3,6 +3,11 @@ set modeline
 set mouse=a
 set incsearch
 
+set undofile                " Save undo's after file closes
+set undodir=$HOME/.vim/undo " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
+
 execute pathogen#infect()
 
 "set rnu
@@ -13,7 +18,7 @@ execute pathogen#infect()
 autocmd FileType cabal setlocal expandtab
 "au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
 
-set list listchars=tab:»·,trail:·
+set list listchars=tab:»\ ,trail:·
 
 " disable shitty vim regex syntax
 nnoremap / /\v
@@ -30,3 +35,6 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
