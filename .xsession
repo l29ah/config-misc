@@ -15,6 +15,8 @@ xset dpms 0 0 600
 #export QT_IM_MODULE=uim
 #uim-xim &
 #export XMODIFIERS=@im=uim
+# Make gtk+ respect ~/.XCompose
+GTK_IM_MODULE=xim
 
 gpg-agent --daemon
 . ~/.gpg-agent-info
