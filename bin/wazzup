@@ -1,0 +1,7 @@
+#!/bin/sh
+myid=80E93558
+theirid="`gpg --no-tty --output - --batch --with-colons --list-keys "$1" | sed -n -e '/^pub/{s/pub:[^:]*:[^:]*:[^:]*:........\(........\):.*/\1/p;q}'`"
+t="`mktemp`"
+wotsap $myid $theirid -o "$t"
+sxiv "$t"
+rm "$t"
