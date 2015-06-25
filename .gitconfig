@@ -7,3 +7,5 @@
 	ui = auto
 [pull]
 	rebase = true
+[sendemail]
+	suppresscc = all
