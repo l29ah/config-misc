@@ -1,3 +1,3 @@
 :set prompt "λ> "
-:set -XOverloadedStrings -XFlexibleInstances -XIncoherentInstances
+:set -XOverloadedStrings -XFlexibleInstances -XIncoherentInstances -XMagicHash -XBangPatterns
 instance Show [Char] where show s = "\"" ++ s ++ "\""
