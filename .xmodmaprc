@@ -49,8 +49,8 @@ keycode 49 = grave asciitilde asterisk plus
 keycode 108 = Alt_L
 
 ! hedgewars sucks
-keycode 62 = Shift_L
-keycode 50 = Shift_R
+!keycode 62 = Shift_L
+!keycode 50 = Shift_R
 
 ! my broken l300 keyboard
 !keycode 75 = 8 asterisk underscore 8
