@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -s https://btc-e.com/api/2/usd_rur/ticker | jq -r '.ticker.last'

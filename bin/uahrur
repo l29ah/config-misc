@@ -1,0 +1,2 @@
+#!/bin/sh
+curl -s https://www.quandl.com/api/v1/datasets/CURRFX/UAHRUB.csv | sed -ne '2{s#[^,]*,\([^,]*\),.*#\1#p;q}'
