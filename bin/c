@@ -1,0 +1,68 @@
+#!/bin/bash
+#cd /tmp
+CC=gcc
+fn="`tempfile -d ~/tmp/`"
+{
+cat << EOF
+#include <fcntl.h>
+#include <limits.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdint.h>
+#include <inttypes.h>
+#include <errno.h>
+
+void say(char *a) { fputs(a, stdout); }
+void skip(int a) {
+	for (int i = 0; i < a; i++) getchar();
+}
+void skipto(char c) {
+	int a;
+	do a = getchar();
+	while(a != c && a != EOF);
+}
+/*void pipe(int a) {
+	int c;
+	for (int i = 0; i < a; i++) {
+		if ((c = getchar()) == EOF) return;
+		putchar(c);
+	}
+}*/
+void pipeto(char a) {
+	int c;
+	while (1) {
+		c = getchar();
+		if (c == EOF || c == a) return;
+		putchar(c);
+	}
+}
+void listento(char *buf, char a) {
+	int c;
+	while (1) {
+		c = getchar();
+		*buf = c;
+		if (*buf == a || c == EOF) return;
+		buf++;
+	}
+}
+
+
+int main(int argc, char** argv) {
+	//int i, j, k, l, m, n;
+	//void *a, *b, *c;
+EOF
+echo -E "$1"
+cat << EOF
+;
+return 0;
+}
+EOF
+} > "$fn.c"
+$CC -std=c99 $CFLAGS "$fn.c" -o "$fn"
+$fn
+rm "$fn" "$fn.c"
