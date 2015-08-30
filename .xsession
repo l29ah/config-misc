@@ -18,11 +18,8 @@ xset dpms 0 0 600
 # Make gtk+ respect ~/.XCompose
 GTK_IM_MODULE=xim
 
-gpg-agent --daemon
+gpg-agent --daemon > ~/.gpg-agent-info
 . ~/.gpg-agent-info
-export GPG_AGENT_INFO
-export SSH_AUTH_SOCK
-export SSH_AGENT_PID
 
 #xmonad &
 ~/.xmonad/xmonad-x* &
