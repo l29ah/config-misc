@@ -9,3 +9,5 @@
 	rebase = true
 [sendemail]
 	suppresscc = all
+[commit]
+	gpgsign = true
