@@ -1,0 +1,4 @@
+#!/bin/sh
+#exec /usr/bin/youtube-dl -f '95/94/45/22/44/35/34/h264-sd/18' "$@"
+#exec /usr/bin/youtube-dl --default-search "ytseach:" -c "$@"
+exec /usr/bin/youtube-dl -c "$@"
