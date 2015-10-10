@@ -11,3 +11,5 @@
 	suppresscc = all
 [commit]
 	gpgsign = true
+[merge]
+	tool = vimdiff
