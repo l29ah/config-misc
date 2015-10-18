@@ -24,7 +24,7 @@ gpg-agent --daemon > ~/.gpg-agent-info
 #xmonad &
 ~/.xmonad/xmonad-x* &
 #xscreensaver &
-xautolock -time 15 -locker 'i3lock -T --color 55ff55 -i ~/wallpapers/c.png' &
+xautolock -time 15 -locker lock &
 #twmnd &
 dunst &
 #LANG=ru_RU.UTF-8 conky -q -d
