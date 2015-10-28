@@ -10,6 +10,7 @@
 [sendemail]
 	suppresscc = all
 [commit]
-	gpgsign = true
+	# Incompatible with git-svn
+	#gpgsign = true
 [merge]
 	tool = vimdiff
