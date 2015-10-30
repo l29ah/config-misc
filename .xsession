@@ -8,7 +8,6 @@ keyboard-setup
 #xset m 2 0	# 800dpi
 xset m 1 0	# 2000dpi
 xset dpms 0 0 600
-#xsetroot -solid black
 
 # uim kludges
 #export GTK_IM_MODULE=uim
@@ -21,8 +20,12 @@ GTK_IM_MODULE=xim
 gpg-agent --daemon > ~/.gpg-agent-info
 . ~/.gpg-agent-info
 
-#xmonad &
-~/.xmonad/xmonad-x* &
+# Compton goodness; doesn't work with xsetroot
+hsetroot -solid "#000000"
+export DBUS_SESSION_BUS_ADDRESS=$(/usr/bin/dbus-launch --autolaunch `cat /var/lib/dbus/machine-id` --binary-syntax --close-stderr)
+`ls -1 ~/.xmonad/xmonad-x* | sed q` &
+compton -b --backend glx --vsync opengl --dbus
+
 #xscreensaver &
 xautolock -time 15 -locker lock &
 #twmnd &
