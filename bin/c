@@ -63,6 +63,6 @@ return 0;
 }
 EOF
 } > "$fn.c"
-$CC -std=c99 $CFLAGS "$fn.c" -o "$fn"
+$CC -std=c11 $CFLAGS "$fn.c" -o "$fn"
 $fn
 rm "$fn" "$fn.c"
