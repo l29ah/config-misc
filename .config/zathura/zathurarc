@@ -1,3 +1,5 @@
 set scroll-full-overlap 0.08
 map <F1> scroll full-down
 map <F2> scroll full-up
+
+set adjust-open width
