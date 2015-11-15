@@ -1,6 +1,0 @@
-#!/bin/sh
-if [ -z "$GPG_AGENT_INFO" ]; then
-	echo No GPG agent available. >&2
-	exit 1
-fi
-exec /usr/bin/tkabber
