@@ -74,7 +74,7 @@ bindkey "^[[2~" yank
 bindkey "^[[5~" up-line-or-history
 bindkey "^[[6~" down-line-or-history
 
-bindkey "^R" history-incremental-search-backward
+bindkey "^R" history-incremental-pattern-search-backward
 
 # YEAH
 setopt NO_BEEP
