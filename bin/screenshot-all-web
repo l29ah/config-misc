@@ -1,0 +1,12 @@
+#!/bin/bash
+FN="screenshot-workspaces-${1:-`date -I`}.png"
+tfn="`tempfile`"
+wsl="`seq 0 14`"	# Workspaces to screenshot
+for ws in $wsl; do
+	xdotool set_desktop $ws
+	sleep 2
+	xwd -root | xwdtopnm > "$tfn-$ws"
+done
+echo $wsl | sed -e "s#\([0-9]*\)#$tfn-\1#g" | xargs pnmcat -lr | pnmtopng > "/tmp/$FN"
+optipng "/tmp/$FN"
+dumpcheese "/tmp/$FN"
