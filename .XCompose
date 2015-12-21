@@ -185,6 +185,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <t> <t> : "☎" U260E # телефон
 <Multi_key> <p> <p> : "☮" U262E # peace
 <Multi_key> <3> <less> : "♡"
+<Multi_key> <less> <more> : "❤"
 <Multi_key> <3> <3> : "☘" U2618 # трилистник
 <Multi_key> <w> <a> : "⚠" U26A0 # внимание
 <Multi_key> <b> <h> : "☣" U2623 # биохазард!
