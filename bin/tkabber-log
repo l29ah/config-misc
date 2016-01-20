@@ -1,16 +1,58 @@
 #!/usr/bin/perl
-while (<STDIN>) {
-	/^.*?timestamp (.*?) jid (.*?) nick (.*?) body (.*?)( me \d)*$/;
-	($time, $nick, $body) = ($1, unescape($3), unescape($4));
-	$nick = "$nick: " if $nick;
-	print "$time] $nick$body\n";
-	#print "$body\n";
-}
+use strict;
+use warnings;
+use Term::ANSIColor;
+
+my %nick_colors;
 
 sub unescape($) {
-	$x = shift;
+	my $x = shift;
 	$x =~ s/(^\{|\}$)//g;
 	$x =~ s/\\n/\n/g;
 	$x =~ s/\\\\/\\/g;
 	return $x;
+}
+
+sub parse {
+	my $fh = shift;
+	while (<$fh>) {
+		/^timestamp (.*?) jid (.*?) nick (.*?) body (.*?)( me \d)?( type \w+)?$/ or next;
+		my ($time, $nick, $body) = ($1, unescape($3), unescape($4));
+		$time =~ s/(....)(..)(..)T(..)(..)(..)/$3.$2.$1 $4:$5:$6/;
+		if ($nick) {
+			my $col = $nick_colors{$nick};
+			if (not $col) {
+				my $c = unpack("%32C*");
+				my @rgb = ($c % 6, (int($c / 10) % 6), (int($c / 100) % 6));
+				if ($rgb[0] == $rgb[1]) {
+					$rgb[0] = ($rgb[0] + 1) % 6;
+				}
+				if ($rgb[1] == $rgb[2]) {
+					$rgb[1] = ($rgb[1] + 2) % 6;
+				}
+				$col = "rgb$rgb[0]$rgb[1]$rgb[2]";
+				$nick_colors{$nick} = $col;
+			};
+			print colored('[', 'grey3'),
+				colored($time, 'grey16'),
+				colored('] ', 'grey3'),
+				colored($nick, $col, 'bold'),
+				": $body\n";
+		} else {
+			print colored($body, 'grey8'), "\n";
+		}
+		#print "$body\n";
+	}
+}
+
+print "$#ARGV";
+if ($#ARGV == -1) {
+	parse(\*STDIN);
+} else {
+	foreach my $fn (@ARGV) {
+		print "\n$fn:\n";
+		open my $fh, "<$fn" or die $!;
+		parse($$fh);
+		close $fh;
+	}
 }
