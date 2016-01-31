@@ -1,0 +1,25 @@
+#subcp = enca:ru:cp1251
+sub-codepage = utf8:cp1251
+
+# OSS crap
+#abs = 16384
+#ao = oss
+#ao = oss:/dev/dsp0
+#audio-samplerate = 48000
+
+# Sometimes xorg crashes when fullscreening the window on opengl
+# vaapi shows green screen
+vo = vaapi
+
+# Trying sdl re tearing
+# Eats ram like a hell
+# 11:57:38]<wm4> the sdl leak was fixed in git master (no idea when it was introduced)
+#vo = sdl
+
+# Cannot handle videos of over 2048x2048
+#vo = xv
+
+# Crashes in newer intel drivers sometimes
+#vo = opengl
+
+ytdl-raw-options = force-ipv4=,youtube-skip-dash-manifest=
