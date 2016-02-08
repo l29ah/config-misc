@@ -16,7 +16,7 @@ sub unescape($) {
 sub parse {
 	my $fh = shift;
 	while (<$fh>) {
-		/^timestamp (.*?) jid (.*?) nick (.*?) body (.*?)( me \d)?( type \w+)?$/ or next;
+		/timestamp (.*?) jid (.*?) nick (.*?) body (.*?)( me \d)?( type \w+)?$/ or next;
 		my ($time, $nick, $body) = ($1, unescape($3), unescape($4));
 		$time =~ s/(....)(..)(..)T(..)(..)(..)/$3.$2.$1 $4:$5:$6/;
 		if ($nick) {
