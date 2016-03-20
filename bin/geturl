@@ -1,0 +1,4 @@
+#!/bin/bash
+# geturl <url> [<whereto>]
+wget -O "${2:-/dev/stdout}" "$1" -U Furryfox
+
