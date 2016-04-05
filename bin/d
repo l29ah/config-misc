@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+my $url_regex = "^.*:\/\/";
+my $url_handler = "urld";
+my $mime_file = "$ENV{HOME}/.config/d";
+
+my $file = $ARGV[0];
+
+if ($file =~ /$url_regex/) {
+	exec "$url_handler \"$ARGV[0]\""
+}
+
+open F, "<$mime_file" or die "Can't open MIME associations file $mime_file";
+my $mime = `file -b -L --mime-type "$ARGV[0]"`;
+print "mime: $mime";
+while (<F>) {
+	s/\n//;
+	($regex, $handler) = split /\,/, $_;
+	if ($mime =~ /$regex/) {
+		exec "$handler \"$file\"\n"
+	}
+}
