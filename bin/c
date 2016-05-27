@@ -16,6 +16,7 @@ cat << EOF
 #include <stdint.h>
 #include <inttypes.h>
 #include <errno.h>
+#include <stdbool.h>
 
 void say(char *a) { fputs(a, stdout); }
 void skip(int a) {
