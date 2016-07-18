@@ -50,6 +50,13 @@
 	mod4 + Shift + P
 	XF86AudioPlay
 
+# Backlight
+"xbacklight -inc 20 -time 0 -steps 1"
+	mod4 + Home
+
+"xbacklight -dec 20 -time 0 -steps 1"
+	mod4 + End
+
 # Clipboard
 "xsel -x"
 	mod4 + x
