@@ -1,3 +1,10 @@
 #!/bin/sh
+cd ~/.mozilla/firefox/
 export GTK2_RC_FILES="/usr/share/themes/Default/gtk-2.0-key/gtkrc"
-exec /usr/bin/firefox-bin "$@"
+#export SSLKEYLOGFILE=~/.mozilla/firefox/sslkey.log
+disp="`ps aux | grep firefox | sed -ne 's#.*xpra start \([^ ]*\) .*#\1#p'`"
+if [ -n "$disp" ]; then
+	DISPLAY="$disp" exec firejail /usr/bin/firefox "$@"
+else
+	exec firejail --x11=xpra /usr/bin/firefox "$@"
+fi
