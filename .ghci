@@ -2,4 +2,6 @@
 :set -XOverloadedStrings -XFlexibleInstances -XIncoherentInstances -XMagicHash -XBangPatterns
 instance Show [Char] where show s = "\"" ++ s ++ "\""
 import Control.Monad
+import Control.Monad.Fix
+import Data.Bits
 import Data.Maybe
