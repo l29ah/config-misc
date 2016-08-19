@@ -27,8 +27,8 @@ export DBUS_SESSION_BUS_ADDRESS=$(/usr/bin/dbus-launch --autolaunch `cat /var/li
 compton -b --backend glx --vsync opengl --dbus
 unset DBUS_SESSION_BUS_ADDRESS
 
-xset s 10
-xss-lock -q lock
+xset s 600
+xss-lock -q lock &
 
 #twmnd &
 dunst &
