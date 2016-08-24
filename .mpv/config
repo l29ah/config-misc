@@ -23,3 +23,6 @@ vo = vaapi
 #vo = opengl
 
 ytdl-raw-options = force-ipv4=,youtube-skip-dash-manifest=
+
+# avoid fucking up the screen locker
+no-stop-screensaver
