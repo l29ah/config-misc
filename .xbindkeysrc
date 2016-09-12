@@ -1,7 +1,7 @@
 # Essentials
 
-"xautolock -locknow; sleep 5; xset dpms force off"
-	mod4 + Shift + Control + L
+"lock"
+	XF86Launch1
 
 "urxvt"
 	mod4 + Control + Return
