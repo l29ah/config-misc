@@ -86,5 +86,5 @@
 "screenshot-web `dmenu` | xclip -i"
 	mod4 + S
 
-"passclip `xclip -o`"
+"passclip"
 	mod4 + Control + C
