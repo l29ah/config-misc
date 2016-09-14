@@ -88,3 +88,6 @@
 
 "passclip"
 	mod4 + Control + C
+
+"mpv `xclip -o`"
+	mod4 + Shift + M
