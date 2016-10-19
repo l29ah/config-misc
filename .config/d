@@ -1,0 +1,7 @@
+image/vnd.djvu,zathura
+image,qiv
+audio,mplayer
+video,mplayer
+application/ogg,mplayer
+application/pdf,zathura
+application/x-directory,ls
