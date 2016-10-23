@@ -9,7 +9,7 @@ Rxvt*scrollTtyKeypress: True
 Rxvt*scrollBar: false
 Rxvt*preeditType: OnTheSpot
 Rxvt*inputMethod: uim
-Rxvt*perl-ext: default,matcher,selection,selection-autotransform
+Rxvt*perl-ext: default,selection,selection-autotransform
 Rxvt*selection-autotransform.0: s/^([^:[:space:]]+):(\\d+):?$/vim +$2 \\Q$1\\E\\x0d/
 Rxvt*saveLines: 10000
 !Rxvt*color0:			black
