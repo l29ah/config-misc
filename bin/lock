@@ -1,2 +1,3 @@
 #!/bin/sh
+xkb-switch -s us
 i3lock -T --color 55ff55 -i ~/wallpapers/c.png || i3lock
