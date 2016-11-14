@@ -23,7 +23,8 @@ gpg-agent --daemon > ~/.gpg-agent-info
 # Compton goodness; doesn't work with xsetroot
 hsetroot -solid "#000000"
 export DBUS_SESSION_BUS_ADDRESS=$(/usr/bin/dbus-launch --autolaunch `cat /var/lib/dbus/machine-id` --binary-syntax --close-stderr)
-`ls -1 ~/.xmonad/xmonad-x* | sed q` &
+# ALSAAudioInput: Ошибка потоков канала
+`ls -1 ~/.xmonad/xmonad-x* | sed q` &> /dev/null &
 compton -b --backend glx --vsync opengl --dbus
 unset DBUS_SESSION_BUS_ADDRESS
 
