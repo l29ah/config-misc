@@ -64,7 +64,7 @@
 	mod4 + c
 
 # Browsers
-"dillo `xclip -o`"
+"dillo `xclip -o | urlencode`"
 	mod4 + d
 
 "firefox `xclip -o`"
