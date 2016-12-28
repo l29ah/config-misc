@@ -1,6 +1,8 @@
 #!/bin/bash
 #cd /tmp
-CC=gcc
+#CC=gcc
+CC=clang
+CFLAGS="$CFLAGS -Wall -Wextra -Wno-unused-parameter"
 fn="`tempfile -d ~/tmp/`"
 {
 cat << EOF
