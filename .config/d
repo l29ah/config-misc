@@ -1,4 +1,5 @@
 image/vnd.djvu,zathura
+image/svg\+xml,display
 image,qiv
 audio,mplayer
 video,mplayer
