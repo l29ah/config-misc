@@ -23,6 +23,15 @@ vo = vaapi
 #vo = opengl
 
 ytdl-raw-options = force-ipv4=,youtube-skip-dash-manifest=
+ytdl-format = best[height<=720]
 
 # avoid fucking up the screen locker
 no-stop-screensaver
+
+# VO: [vaapi] 5804x3018 yuyv422
+# mpv: /var/tmp/paludis/x11-libs-libva-1.7.2/work/libva-1.7.2/va/x11/dri2_util.c:132: union dri_buffer *dri2GetRenderingBuffer(VADriverContextP, struct dri_drawable *): Assertion `buffers' failed.
+#vf=scale=1280:800
+
+# avoid different letter sizes and styles
+sub-font=Arial Unicode MS
+osd-font=Arial Unicode MS
