@@ -1,5 +1,6 @@
 image/vnd.djvu,zathura
 image/svg\+xml,display
+image/webp,mpv
 image,qiv
 audio,mplayer
 video,mplayer
