@@ -4,4 +4,10 @@ instance Show [Char] where show s = "\"" ++ s ++ "\""
 import Control.Monad
 import Control.Monad.Fix
 import Data.Bits
+import Data.List
 import Data.Maybe
+import Data.Word
+import Numeric
+
+unroll = reverse . unfoldr step where step 0 = Nothing; step i = Just (fromIntegral i, i `shiftR` 8)
+hex x = showHex x []
