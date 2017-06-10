@@ -20,3 +20,5 @@
 	autostash = true
 [http]
 	sslVerify = true
+[commit]
+	verbose = 1
