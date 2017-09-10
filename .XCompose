@@ -195,11 +195,11 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 
 
 # символы религий
-<Multi_key> <slash> <plus> : "☦" U2626
+<Multi_key> <slash> <plus> : "☦" U2626 # ORTHODOX CROSS
 <Multi_key> <parenleft> <asterisk> : "☪" U262A # звезда и полумесяц
 <Multi_key> <b> <b> : "卍" U534D # знак Будды
 <Multi_key> <B> <B> : "☸" U3638 # колесо Дхармы
-<Multi_key> <6> <6> : "✡" U2721 # звезда Давида
+<Multi_key> <6> <6> : "✡" U2721 # звезда Давида STAR OF DAVID
 
 <Multi_key> <Cyrillic_shcha> <Cyrillic_es>  : "©"   copyright # COPYRIGHT SIGN
 <Multi_key> <Cyrillic_shcha> <Cyrillic_ka>	: "®"   registered # REGISTERED SIGN
@@ -243,7 +243,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 
 <Multi_key> <s> <h>        : "ʃ" U0283 # small esh
 <Multi_key> <z> <h>        : "ʒ" U0292 # small ezh
-<Multi_key> <u> <u>        : "ʌ" U028c # small turned v (vowel in "buck")
+#<Multi_key> <u> <u>        : "ʌ" U028c # small turned v (vowel in "buck")
 
 #<Multi_key> <g> <n>        : "ɲ" U0272 # small n with left hook
 <Multi_key> <j> <n>        : "ɲ" U0272 # small n with left hook
