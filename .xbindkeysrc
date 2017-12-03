@@ -100,3 +100,15 @@
 
 "light-toggle"
 	mod4 + XF86Launch1
+
+"echo cycle pause   | socat - ~/.mpv/socket"
+	XF86AudioPlay
+
+"echo cycle pause   | socat - ~/.mpv/socket"
+	XF86AudioStop
+
+"echo playlist_prev | socat - ~/.mpv/socket"
+	XF86AudioPrev
+
+"echo playlist_next | socat - ~/.mpv/socket"
+	XF86AudioNext

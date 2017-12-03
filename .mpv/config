@@ -35,3 +35,6 @@ no-stop-screensaver
 # avoid different letter sizes and styles
 sub-font=Arial Unicode MS
 osd-font=Arial Unicode MS
+
+# control it via json-rpc
+input-ipc-server=~~/socket
