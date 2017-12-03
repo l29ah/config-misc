@@ -50,12 +50,18 @@
 	mod4 + Shift + P
 	XF86AudioPlay
 
-# Backlight
-"xbacklight -inc 20 -time 0 -steps 1"
-	mod4 + Home
-
-"xbacklight -dec 20 -time 0 -steps 1"
-	mod4 + End
+# Backlight is superseded by illum
+#"xbacklight -inc 5 -time 0 -steps 1"
+#	mod4 + Home
+#
+#"xbacklight -dec 5 -time 0 -steps 1"
+#	mod4 + End
+#
+#"xbacklight -inc 5 -time 0 -steps 1"
+#	mod4 + Prior
+#
+#"xbacklight -dec 5 -time 0 -steps 1"
+#	mod4 + Next
 
 # Clipboard
 "xsel -x"
@@ -91,3 +97,6 @@
 
 "mpv `xclip -o`"
 	mod4 + Shift + M
+
+"light-toggle"
+	mod4 + XF86Launch1
