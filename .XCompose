@@ -269,8 +269,8 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 # Other symbols
 <Multi_key> <Cyrillic_shcha> <Cyrillic_shcha> : "°"   degree # DEGREE SIGN
 
-<Multi_key> <?> <!> : "⁈" U2048 # QUESTION EXCLAMATION, ?!
-<Multi_key> <!> <?> : "⁉"
+<Multi_key> <question> <!> : "⁈" U2048 # QUESTION EXCLAMATION, ?!
+<Multi_key> <!> <question> : "⁉"
 <Multi_key> <underscore><a> : "ₐ" 
 <Multi_key> <minus> <minus> <comma> : "‐" U2010 #человеческий дефис
 <Multi_key> <w> <w> : "ʬ"
