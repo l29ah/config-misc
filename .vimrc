@@ -1,4 +1,8 @@
-set clipboard=unnamedplus,autoselectplus
+if has('nvim')
+	set clipboard+=unnamedplus
+else
+	set clipboard=unnamedplus,autoselectplus
+endif
 set modeline
 set mouse=a
 set incsearch
@@ -37,6 +41,8 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+if !has('nvim')
+	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+endif
 
 let g:XkbSwitchEnabled = 1
