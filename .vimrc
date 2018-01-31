@@ -36,9 +36,9 @@ let CoVim_default_name = "L29Ah"
 let CoVim_default_port = "12334"
 
 au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+au VimEnter * RainbowParenthesesLoadRound
+au VimEnter * RainbowParenthesesLoadSquare
+au VimEnter * RainbowParenthesesLoadBraces
 
 autocmd StdinReadPre * let s:std_in=1
 if !has('nvim')
