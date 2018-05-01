@@ -7,19 +7,18 @@ sub-codepage = utf8:cp1251
 #ao = oss:/dev/dsp0
 #audio-samplerate = 48000
 
-# Sometimes xorg crashes when fullscreening the window on opengl
-# vaapi shows green screen
-vo = vaapi
+# tearing
+#vo = vaapi
 
-# Trying sdl re tearing
-# Eats ram like a hell
-# 11:57:38]<wm4> the sdl leak was fixed in git master (no idea when it was introduced)
-#vo = sdl
+# doesn't tear
+vo = sdl
 
 # Cannot handle videos of over 2048x2048
+# tearing
 #vo = xv
 
 # Crashes in newer intel drivers sometimes
+# tearing
 #vo = opengl
 
 ytdl-raw-options = force-ipv4=,youtube-skip-dash-manifest=
