@@ -15,12 +15,6 @@
 
 
 # Sound-related stuff:
-"ossmix vmix0-outvol -- +0.5 || { amixer set Master 2%+; amixer -c 1 set PCM 2%+; }"
-	XF86AudioRaiseVolume
-
-"ossmix vmix0-outvol -- -0.5 || { amixer set Master 2%-; amixer -c 1 set PCM 2%-; }"
-	XF86AudioLowerVolume
-
 #"ossmix `pcmof mpd` -- +0.5"
 #	mod4 + Shift + Up
 #"ossmix `pcmof mpd` -- -0.5"
