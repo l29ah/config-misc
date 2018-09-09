@@ -52,11 +52,5 @@ keycode 108 = Alt_L
 !keycode 62 = Shift_L
 !keycode 50 = Shift_R
 
-! my broken l300 keyboard
-!keycode 75 = 8 asterisk underscore 8
-!keycode 76 = 9 parenleft question 9
-!keycode 95 = 0 parenright percent 0
-!keycode 96 = minus underscore exclam equal
-
 clear mod1
 add mod1 = Alt_L
