@@ -2,8 +2,8 @@ image/vnd.djvu,zathura
 image/svg\+xml,display
 image/webp,mpv
 image,qiv
-audio,mplayer
-video,mplayer
-application/ogg,mplayer
+audio,mpv
+video,mpv
+application/ogg,mpv
 application/pdf,zathura
 application/x-directory,ls
