@@ -82,3 +82,7 @@ export HISTSIZE=50000
 export SAVEHIST=50000
 export HISTFILE=~/.zhistory
 setopt inc_append_history
+
+# fix Home and End keys
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
