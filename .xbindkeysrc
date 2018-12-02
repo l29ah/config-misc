@@ -3,9 +3,6 @@
 "lock"
 	XF86Launch1
 
-"urxvt"
-	mod4 + Control + Return
-
 "dmenu_run"
 	mod4 + Shift + Control + P
 
