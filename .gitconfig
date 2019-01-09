@@ -24,3 +24,7 @@
 	autostash = true
 [http]
 	sslVerify = true
+[credential]
+	helper = cache --timeout=31536000
+[receive]
+	denyCurrentBranch = warn
