@@ -2,5 +2,9 @@
 cmd="$1"
 shift
 case "$cmd" in
-	d)	rm -f "$@";;
+	d)
+		files=$(cat)
+		echo "Removing $files"
+		rm -f "$files"
+		;;
 esac
