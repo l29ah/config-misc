@@ -1,10 +1,26 @@
 #!/bin/sh
-r=`cat /sys/devices/platform/smapi/BAT0/remaining_running_time_now`
-case "$r" in
-	not_discharging) cat /sys/class/power_supply/BAT0/status;;
-	*) case `cat /sys/devices/platform/smapi/BAT0/barcoding` in
-		1ZFBM9851LX) r=$((r * 7 / 10));;
+if [ -e /sys/devices/platform/smapi ]; then	# older thinkpads
+	r=$(cat /sys/devices/platform/smapi/BAT0/remaining_running_time_now)
+	case "$r" in
+		not_discharging) cat /sys/class/power_supply/BAT0/status;;
+		*) case $(cat /sys/devices/platform/smapi/BAT0/barcoding) in
+			1ZFBM9851LX) r=$((r * 7 / 10));;
+		esac
+		echo $r;;
 	esac
-	echo $r;;
-esac
-#echo $((`cat /sys/class/power_supply/BAT0/energy_now` * 1000 / `cat /sys/class/power_supply/BAT0/power_now`))
+else
+	batpath=/sys/class/power_supply/BAT0
+	s=$(cat "$batpath/status")
+	case "$s" in
+		Charging) echo "$s";;
+		*)
+			if [ -e "$batpath/energy_now" ]; then
+				echo "$(cat $batpath/energy_now) * 60 / $(cat $batpath/power_now)" | bc 2>/dev/null
+			else
+				# coreboot on X230
+				# FIXME account for energy
+				echo "$(cat $batpath/charge_now) * 60 / $(cat $batpath/current_now)" | bc 2>/dev/null
+			fi
+			;;
+	esac
+fi
