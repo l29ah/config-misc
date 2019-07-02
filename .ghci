@@ -1,5 +1,10 @@
+-- import IPPrint.Colored
+-- :set -interactive-print=IPPrint.Colored.cpprint
+-- :def cp (\_ -> return ":set -interactive-print=IPPrint.Colored.cpprint")
+-- :def ncp (\_ -> return ":set -interactive-print=print")
 :set prompt "λ> "
-:set -XOverloadedStrings -XFlexibleInstances -XIncoherentInstances -XMagicHash -XBangPatterns
+:set +m
+:set -XOverloadedStrings -XFlexibleInstances -XIncoherentInstances -XMagicHash -XBangPatterns -XFlexibleContexts -XTypeApplications
 instance Show [Char] where show s = "\"" ++ s ++ "\""
 import Control.Monad
 import Control.Monad.Fix
@@ -11,3 +16,4 @@ import Numeric
 
 unroll = reverse . unfoldr step where step 0 = Nothing; step i = Just (fromIntegral i, i `shiftR` 8)
 hex x = showHex x []
+f2c x = (x - 32) / 1.8
