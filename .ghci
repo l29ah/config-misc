@@ -14,6 +14,7 @@ import Data.List
 import Data.Maybe
 import Data.Word
 import Numeric
+import Text.Printf
 
 unroll = reverse . unfoldr step where step 0 = Nothing; step i = Just (fromIntegral i, i `shiftR` 8)
 hex x = showHex x []
