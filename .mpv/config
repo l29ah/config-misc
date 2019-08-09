@@ -7,11 +7,12 @@ sub-codepage = utf8:cp1251
 #ao = oss:/dev/dsp0
 #audio-samplerate = 48000
 
-# tearing
+# tearing, broken, consumes 10% more cpu than -vo=gpu on x210
 #vo = vaapi
 
 # doesn't tear
-vo = sdl
+# but stops until the window is drawn
+#vo = sdl
 
 # Cannot handle videos of over 2048x2048
 # tearing
@@ -20,6 +21,8 @@ vo = sdl
 # Crashes in newer intel drivers sometimes
 # tearing
 #vo = opengl
+
+hwdec=vaapi
 
 ytdl-raw-options = force-ipv4=,youtube-skip-dash-manifest=
 ytdl-format = best[height<=720]
@@ -37,3 +40,6 @@ osd-font=Arial Unicode MS
 
 # control it via json-rpc
 input-ipc-server=~~/socket
+
+# microlabs m-890
+#af=equalizer=f=300:t=h:width=700:g=-10,equalizer=f=1000:t=h:width=2000:g=-5
