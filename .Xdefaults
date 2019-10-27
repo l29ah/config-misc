@@ -27,3 +27,21 @@ Rxvt*saveLines: 10000
 !Rxvt*color13:			#EFA0BF
 !Rxvt*color14:			#A0FFFF
 !Rxvt*color15:			white
+
+xterm*utf8Title: true
+xterm*faceSize: 6
+xterm*faceName: Terminus
+xterm*colorBD:     #e6d51d
+xterm*background:  #000000
+xterm*foreground:  #ffffff
+xterm*cursorColor: grey
+xterm*scrollBar:        false
+xterm*eightBitInput:    false
+xterm*metaSendsEscape:  true
+xterm*boldMode:         true
+xterm*alwaysBoldMode:   false
+xterm*dynamicColors:    on
+xterm*colorMode:        on
+xterm*saveLines:        20000
+xterm*visualBell:       true
+xterm*color12: #0000ff
