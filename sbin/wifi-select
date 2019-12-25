@@ -33,7 +33,7 @@ while read -r s; do
 done < <( iwlist $iface scan | sed -rn 's#^[^#]*(ESSID|key):"?([^"]*)"?.*$#\1="\2"#p; s#^\s*Quality=(\S*).*#qual=\1#p' )
 exec 3>&1
 ESSID=$(dialog --menu "Choose network" 20 80 15 "${a[@]}" 2>&1 1>&3) || default
-[ -n "$ESSID" ] || fail
+[ -n "$ESSID" ] || fail 'no network chosen'
 if [[ "${keytype[$ESSID]}" == "on" ]]; then
 	passphrase=$(dialog --inputbox "Enter password for $ESSID" 20 80 2>&1 1>&3)
 	res=$(wpa_passphrase "$ESSID" "$passphrase") || {
