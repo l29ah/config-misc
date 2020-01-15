@@ -3,3 +3,5 @@ map <F1> scroll full-down
 map <F2> scroll full-up
 
 set adjust-open width
+
+map <C-i> recolor
