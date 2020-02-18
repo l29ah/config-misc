@@ -1,11 +1,47 @@
 #!/bin/bash
-{ while :; do
-	openweathermap moscow,russia > /tmp/weather
-	sleep 600
-done } &
-trap 'kill %1' EXIT
+if [ -e /sys/devices/platform/smapi/ ]; then
+	power=/sys/devices/platform/smapi/BAT0/power_now
+	divisor=1
+else
+	power=/sys/class/power_supply/BAT0/power_now
+	divisor=1000
+	if [ ! -e "$power" ]; then
+		power=/tmp/power_now
+		divisor=1000
+		if [ ! -e "$power" ]; then
+			{ while :; do
+				echo $(($(cat /sys/class/power_supply/BAT0/voltage_now) * $(cat /sys/class/power_supply/BAT0/current_now) / 1000000)) > /tmp/power_now
+				sleep 5
+			done; } &
+		fi
+	fi
+fi
+if [ -e /sys/devices/platform/thinkpad_hwmon/fan1_input ]; then
+	fan=/sys/devices/platform/thinkpad_hwmon/fan1_input
+else
+	fan=/sys/class/hwmon/hwmon2/fan1_input
+fi
+
+if [ ! -e /tmp/weather ]; then
+	{ while :; do
+		#openweathermap moscow,russia > /tmp/weather
+		gismeteo-now > /tmp/weather
+		sleep 600
+	done } &
+fi
+#{ while :; do
+#	ssh subzero cat /tmp/temp > /tmp/hometemp
+#	sleep 600
+#done } &
+trap 'kill %1 %2 %3; rm /tmp/power_now /tmp/weather' EXIT
 echo '[?25l'	# hide the cursor
 while :; do
-	echo -n "CT:[31m$((`cat /sys/class/hwmon/hwmon0/temp1_input`/1000))°C[m OT:[32m`cat /tmp/weather`°C[m B:[34m`cat /sys/class/power_supply/BAT0/capacity`%[m,[33m`battery-time`[m,[31m`cat /sys/devices/platform/smapi/BAT0/power_now`[m F:[35m`cat /sys/devices/platform/thinkpad_hwmon/fan1_input`RPM[m `date`[J"
+	batterytime=$(battery-time)
+	if [ "$batterytime" -lt 10 ] && grep -q Discharging /sys/class/power_supply/BAT*/status && [ ! -e ~/tmp/noannoy ]; then
+		xannoy 1
+	fi
+	pow=$(cat "$power")
+	pow=${pow:=0}
+	echo -n "CT:[31m$(($(cat /sys/class/hwmon/hwmon1/temp1_input)/1000))°C[m OT:[32m$(cat /tmp/weather)°C[m B:[34m$(cat /sys/class/power_supply/BAT0/capacity)%[m,[33m$batterytime[m,[31m$((pow/divisor))[m F:[35m$(cat "$fan")RPM[m $(date)[J"
 	sleep 2
 done
