@@ -2,7 +2,7 @@ Tkabber*font: Terminus 8
 
 Rxvt*background: black
 Rxvt*foreground: white
-Rxvt*font: xft:Terminus:size=6, xft:Arial Unicode MS:size=6
+Rxvt*font: xft:Terminus:pixelsize=14, xft:Arial Unicode MS:pixelsize=14
 Rxvt*scrollWithBuffer: True
 Rxvt*scrollTtyOutput: False
 Rxvt*scrollTtyKeypress: True
