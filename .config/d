@@ -4,6 +4,7 @@ image/webp,mpv
 image,qiv
 audio,mpv
 video,mpv
+application/epub\+zip,fbreader
 application/ogg,mpv
 application/pdf,zathura
 application/x-directory,ls
