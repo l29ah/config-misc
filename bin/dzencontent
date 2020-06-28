@@ -42,6 +42,7 @@ while :; do
 	fi
 	pow=$(cat "$power")
 	pow=${pow:=0}
-	echo -n "CT:[31m$(($(cat /sys/class/hwmon/hwmon1/temp1_input)/1000))°C[m OT:[32m$(cat /tmp/weather)°C[m B:[34m$(cat /sys/class/power_supply/BAT0/capacity)%[m,[33m$batterytime[m,[31m$((pow/divisor))[m F:[35m$(cat "$fan")RPM[m $(date)[J"
+	echo -n "CT:[31m$(($(cat /sys/class/hwmon/hwmon1/temp1_input)/1000))°C[m OT:[32m$(cat /tmp/weather)°C[m B:[34m$(cat /sys/class/power_supply/BAT0/capacity)%[m,[33m$batterytime[m,[31m$((pow/divisor))[m $(/opt/plan9/bin/date)[J"
+	#F:[35m$(cat "$fan")RPM[m 
 	sleep 2
 done
