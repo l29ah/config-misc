@@ -7,4 +7,5 @@ video,mpv
 application/epub\+zip,fbreader
 application/ogg,mpv
 application/pdf,zathura
+application/postscript,zathura
 application/x-directory,ls
