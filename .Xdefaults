@@ -28,6 +28,9 @@ Rxvt*saveLines: 10000
 !Rxvt*color14:			#A0FFFF
 !Rxvt*color15:			white
 
+! Disable printing the terminal contents when pressing PrintScreen.
+URxvt.print-pipe: "cat > /dev/null"
+
 xterm*utf8Title: true
 xterm*faceSize: 6
 xterm*faceName: Terminus
