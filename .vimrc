@@ -61,3 +61,6 @@ augroup Binary
   au BufWritePost *.bin if &bin | %!xxd
   au BufWritePost *.bin set nomod | endif
 augroup END
+
+" gitgutter bullshit
+set updatetime=100
