@@ -23,7 +23,10 @@ autocmd FileType cabal setlocal expandtab
 autocmd FileType text setlocal foldmethod=indent
 " don't break lines automatically; see /usr/share/vim/*/ftplugin/mail.vim
 autocmd FileType mail setlocal textwidth=666
+
+" Ledger ft
 "au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
+autocmd FileType ledger let b:SuperTabDisabled = 1
 
 set list listchars=tab:»\ ,trail:·
 
