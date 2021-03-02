@@ -16,6 +16,7 @@ Rxvt*saveLines: 10000
 !Rxvt*color2:			green4
 !Rxvt*color3:			yellow3
 !Rxvt*color4:			blue3
+urxvt*color4: #0000FF
 !Rxvt*color5:			#A000A0
 !Rxvt*color6:			#009999
 !Rxvt*color7:			#D0B099
