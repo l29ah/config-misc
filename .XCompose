@@ -276,6 +276,8 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <w> <w> : "ʬ"
 <Multi_key> <1> <slash> : "⅟" U215F # FRACTION NUMERATOR ONE
 <Multi_key> <parenleft> <colon> : "☻"
+<Multi_key> <colon> <P> : "😜" # Face With Stuck-Out Tongue and Winking Eye
+<Multi_key> <colon> <asterisk> : "😘"	# FACE THROWING A KISS
 <Multi_key> <r> <i> <p> : "†"
 <Multi_key> <s> <k> : "☠"
 <Multi_key> <0> <0> : "ⵓ"
@@ -284,6 +286,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 # misc
 <Multi_key><colon><p> : ":þ"
 <Multi_key><u><f><d><e><f> : "﷯"
+<Multi_key><c><n> : "[citation needed]"
 
 <Multi_key><p><i><c><b><i><k><e> : "http://www.thinking.ru/images/gt-avalanche-2.0-black.jpg"
 <Multi_key><p><i><c><c><o><m><b> : "https://dump.bitcheese.net/files/ipudesi/flying_combine.jpeg"
@@ -292,11 +295,11 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key><p><i><c><n><o><u> : "http://www.exchange3d.com/cubecart/images/uploads/aff186/No_U_Turn.jpg"
 <Multi_key><p><i><c><n><g><o><v> : "http://r-img.fotki.yandex.ru/get/3114/goodseo.0/0_2e17_783932a1_L"
 <Multi_key><p><i><c><c><b> : "http://dump.bitcheese.net/images/ocyxuko/crutch_bike.jpeg"
-<Multi_key><p><i><c><h><h> : "http://ompldr.org/vOG9lNw"
 #<Multi_key><Cyrillic_te><Cyrillic_ef> : "ТЕХНОФАШИЗМ"
 <Multi_key><n><a> : "ТЕХНОФАШИЗМ"
 
+<Multi_key><g><g> : "https://get.gentoo.org"
 <Multi_key><l><m><g> : "http://lmgtfy.com/?q="
 <Multi_key><t><s> : "http://tsya.ru/"
-<Multi_key><w><e><a><r> : "http://galereika.net/_ph/115/2/935923260.jpg"
+<Multi_key><w><e><a><r> : "https://otvet.imgsmail.ru/download/041b12e4132a6b481134c50b4596a693_i-1540.jpg"
 <Multi_key><a><s><k> : "http://sol.gfxile.net/dontask.html"
