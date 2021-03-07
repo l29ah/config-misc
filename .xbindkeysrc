@@ -12,6 +12,13 @@
 
 
 # Sound-related stuff:
+# handled by actkbd, so shouldn't be propagated by X software
+"true"
+	XF86AudioRaiseVolume
+
+"true"
+	XF86AudioLowerVolume
+
 #"ossmix `pcmof mpd` -- +0.5"
 #	mod4 + Shift + Up
 #"ossmix `pcmof mpd` -- -0.5"
