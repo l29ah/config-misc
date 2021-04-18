@@ -78,8 +78,8 @@ bindkey "^R" history-incremental-pattern-search-backward
 # YEAH
 setopt NO_BEEP
 
-export HISTSIZE=50000
-export SAVEHIST=50000
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 export HISTFILE=~/.zhistory
 setopt inc_append_history
 setopt extendedhistory
