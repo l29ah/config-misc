@@ -3,6 +3,10 @@ export DARCS_DONT_ESCAPE_8BIT=1
 export EDITOR=vim
 export PATH=~/"bin/:$PATH"
 export QT_QPA_PLATFORMTHEME=qt5ct
+
+# for ms corefonts' crispy rendering, nable says so
+export FREETYPE_PROPERTIES=truetype:interpreter-version=35
+
 . ~/.gpg-agent-info
 export GPG_AGENT_INFO
 export SSH_AUTH_SOCK
