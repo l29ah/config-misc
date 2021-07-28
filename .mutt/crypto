@@ -12,7 +12,7 @@ set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons --list-keys
 set pgp_list_secring_command="gpg --no-verbose --batch --with-colons --list-secret-keys %r" 
 
 # specify the uid to use when encrypting/signing
-set pgp_sign_as=0x80E93558
+set pgp_default_key=0xC1FD909980E93558
 
 # this set the number of seconds to keep in memory the passpharse used to encrypt/sign
 # the more the less secure it will be
