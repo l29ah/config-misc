@@ -3,6 +3,7 @@ export DARCS_DONT_ESCAPE_8BIT=1
 export EDITOR=vim
 export PATH=~/"bin/:$PATH"
 export QT_QPA_PLATFORMTHEME=qt5ct
+export LIBGL_SHOW_FPS=true
 
 # for ms corefonts' crispy rendering, nable says so
 export FREETYPE_PROPERTIES=truetype:interpreter-version=35
