@@ -1,5 +1,7 @@
 Tkabber*font: Terminus 8
 
+Sxiv.background: #777777
+
 Rxvt*background: black
 Rxvt*foreground: white
 Rxvt*font: xft:Terminus:pixelsize=14, xft:Arial Unicode MS:pixelsize=14
