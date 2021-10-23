@@ -46,19 +46,19 @@ alias ls='ls --color=auto'
 setopt histignoredups incappendhistory hist_ignore_space
 
 case "$TERM" in
-        xterm)
-                bindkey "^[OH" beginning-of-line
-                bindkey "^[OF" end-of-line
-                bindkey "^[[H" beginning-of-line
-                bindkey "^[[F" end-of-line
-                ;;
-        rxvt-unicode)
-                bindkey "^[[7~" beginning-of-line
-                bindkey "^[[8~" end-of-line
-                ;;
-        *)
-                bindkey "^[[1~" beginning-of-line
-                bindkey "^[[4~" end-of-line
+	xterm)
+		bindkey "^[OH" beginning-of-line
+		bindkey "^[OF" end-of-line
+		bindkey "^[[H" beginning-of-line
+		bindkey "^[[F" end-of-line
+		;;
+	rxvt-unicode)
+		bindkey "^[[7~" beginning-of-line
+		bindkey "^[[8~" end-of-line
+		;;
+	*)
+		bindkey "^[[1~" beginning-of-line
+		bindkey "^[[4~" end-of-line
 esac
 bindkey "^[[3~" delete-char
 bindkey "^[[2~" yank
