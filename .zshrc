@@ -40,6 +40,12 @@ else
 	PS1="%B%F{magenta}%n%F{white}Z%F{magenta}${zshhostPS1:-%m} %B%F{blue}%~ ‰%b%f %F{white}"
 fi
 
+ssh() {
+	old_title=$(xtitle -gw)
+	xtitle "ssh $1"
+	/usr/bin/ssh "$@"
+	xtitle "$old_title"
+}
 alias grep='grep --colour=auto'
 alias ls='ls --color=auto'
 
