@@ -178,6 +178,22 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <ampersand> <z> : "ζ"
 <Multi_key> <ampersand> <Z> : "Ζ"
 
+# Serbian cyrillic
+<Multi_key> <Cyrillic_EL> <Cyrillic_SOFTSIGN> : "Љ" U0409 # CYRILLIC CAPITAL LETTER LJE
+<Multi_key> <Cyrillic_EL> <Cyrillic_softsign> : "Љ" U0409 # CYRILLIC CAPITAL LETTER LJE
+<Multi_key> <Cyrillic_EN> <Cyrillic_SOFTSIGN> : "Њ" U040A # CYRILLIC CAPITAL LETTER NJE
+<Multi_key> <Cyrillic_EN> <Cyrillic_softsign> : "Њ" U040A # CYRILLIC CAPITAL LETTER NJE
+<Multi_key> <Cyrillic_el> <Cyrillic_softsign> : "љ" U0459 # CYRILLIC SMALL LETTER LJE
+<Multi_key> <Cyrillic_en> <Cyrillic_softsign> : "њ" U045A # CYRILLIC SMALL LETTER NJE
+<Multi_key> <Cyrillic_CHE> <Cyrillic_CHE> : "Ћ"
+<Multi_key> <Cyrillic_CHE> <Cyrillic_che> : "Ћ"
+<Multi_key> <Cyrillic_che> <Cyrillic_che> : "ћ"
+<Multi_key> <Cyrillic_TSE> <Cyrillic_TSE> : "Џ"
+<Multi_key> <Cyrillic_TSE> <Cyrillic_tse> : "Џ"
+<Multi_key> <Cyrillic_tse> <Cyrillic_tse> : "џ"
+<Multi_key> <Cyrillic_DE> <Cyrillic_DE> : "Ђ"
+<Multi_key> <Cyrillic_DE> <Cyrillic_de> : "Ђ"
+<Multi_key> <Cyrillic_de> <Cyrillic_de> : "ђ"
 
 # JUST FOR FUN, веселья ради
 <Multi_key> <asterisk> <1> : "★" U2605 # закрашенная звёзда
