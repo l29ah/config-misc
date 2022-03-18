@@ -1,4 +1,5 @@
-#!/bin/bash -x
+#!/bin/bash
+set -e
 iface='wlan0'
 conf='/etc/wpa_supplicant/wpa_supplicant.conf'
 
@@ -38,9 +39,11 @@ if [[ "${keytype[$ESSID]}" == "on" ]]; then
 	passphrase=$(dialog --inputbox "Enter password for $ESSID" 20 80 2>&1 1>&3)
 	res=$(wpa_passphrase "$ESSID" "$passphrase") || {
 		e="$ESSID: $res; trying to connect anyway"
-		res="$(perl -0777 -n -e 's/.*\n(network={\n.*?ssid="'"$ESSID"'".*?})/$1/ms and print' < "${conf}.default")"
-		run
-		fail "$e"
+		echo "$e"
+		res="$(perl -0777 -n -e 's/.*\n(network=\{\n.*?ssid="'"$ESSID"'".*?\}).*$/$1/ms and print' < "${conf}.default")"
+		#echo "$res"
+		#run
+		#fail "$e"
 	}
 else
 	res="
