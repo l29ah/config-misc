@@ -10,7 +10,7 @@ else
 		divisor=1000
 		if [ ! -e "$power" ]; then
 			{ while :; do
-				echo $(($(cat /sys/class/power_supply/BAT0/voltage_now) * $(cat /sys/class/power_supply/BAT0/current_now) / 1000000)) > /tmp/power_now
+				echo $(($(< /sys/class/power_supply/BAT0/voltage_now) * $(< /sys/class/power_supply/BAT0/current_now) / 1000000)) > /tmp/power_now
 				sleep 5
 			done; } &
 		fi
@@ -42,9 +42,9 @@ while :; do
 	if [ "$batterytime" -lt 10 ] && grep -q Discharging /sys/class/power_supply/BAT*/status && [ ! -e ~/tmp/noannoy ]; then
 		xannoy 1
 	fi
-	pow=$(cat "$power")
+	pow=$(< "$power")
 	pow=${pow:=0}
-	echo -n "CT:[31m$(($(cat /sys/class/hwmon/hwmon1/temp1_input)/1000))°C[m OT:[32m$(cat /tmp/weather)°C[m B:[34m$(cat /sys/class/power_supply/BAT0/capacity)%[m,[33m$batterytime[m,[31m$((pow/divisor))[m $(/opt/plan9/bin/date)[J"
+	echo -n "CT:[31m$(($(< /sys/class/hwmon/hwmon1/temp1_input)/1000))°C[m OT:[32m$(< /tmp/weather)°C[m B:[34m$(< /sys/class/power_supply/BAT0/capacity)%[m,[33m$batterytime[m,[31m$((pow/divisor))[m $(/opt/plan9/bin/date)[J"
 	#F:[35m$(cat "$fan")RPM[m 
 	sleep 2
 done
