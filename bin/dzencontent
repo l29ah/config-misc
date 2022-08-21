@@ -16,11 +16,13 @@ else
 		fi
 	fi
 fi
-if [ -e /sys/devices/platform/thinkpad_hwmon/fan1_input ]; then
-	fan=/sys/devices/platform/thinkpad_hwmon/fan1_input
-else
-	fan=/sys/class/hwmon/hwmon2/fan1_input
-fi
+
+# No fan data on X210
+#if [ -e /sys/devices/platform/thinkpad_hwmon/fan1_input ]; then
+#	fan=/sys/devices/platform/thinkpad_hwmon/fan1_input
+#else
+#	fan=/sys/class/hwmon/hwmon2/fan1_input
+#fi
 
 if [ ! -e /tmp/weather ]; then
 	{ while :; do
