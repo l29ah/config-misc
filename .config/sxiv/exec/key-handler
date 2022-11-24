@@ -1,10 +1,25 @@
 #!/bin/sh
+rotate() {
+	IFS='
+'
+	for file in $files; do
+		echo "Rotating $file"
+		jpegtran -rotate "$1" -outfile "$file" "$file"
+	done
+}
 cmd="$1"
 shift
+files=$(cat)
 case "$cmd" in
+	# Ctrl-x d
 	d)
-		files=$(cat)
 		echo "Removing $files"
 		rm -f "$files"
+		;;
+	greater)
+		rotate 90
+		;;
+	less)
+		rotate 270
 		;;
 esac
