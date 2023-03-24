@@ -194,6 +194,8 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <Cyrillic_DE> <Cyrillic_DE> : "Ђ"
 <Multi_key> <Cyrillic_DE> <Cyrillic_de> : "Ђ"
 <Multi_key> <Cyrillic_de> <Cyrillic_de> : "ђ"
+<Multi_key> <Cyrillic_SHORTI> <Cyrillic_SHORTI> : "Ј"
+<Multi_key> <Cyrillic_shorti> <Cyrillic_shorti> : "ј"
 
 # JUST FOR FUN, веселья ради
 <Multi_key> <asterisk> <1> : "★" U2605 # закрашенная звёзда
@@ -303,15 +305,12 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 # misc
 <Multi_key><colon><p> : ":þ"
 <Multi_key><u><f><d><e><f> : "﷯"
+<Multi_key><r><s> : "🤖💬:"	# robot says
 <Multi_key><c><n> : "[citation needed]"
 
 <Multi_key><p><i><c><b><i><k><e> : "http://www.thinking.ru/images/gt-avalanche-2.0-black.jpg"
-<Multi_key><p><i><c><c><o><m><b> : "https://dump.bitcheese.net/files/ipudesi/flying_combine.jpeg"
 <Multi_key><p><i><c><s><h><i><t> : "http://www.fekal.ru/photos/5.jpg"
-<Multi_key><p><i><c><n><y><a><a> : "http://stat8.blog.ru/lr/09048869f1905ed128d6ac0e438dd1f2"
-<Multi_key><p><i><c><n><o><u> : "http://www.exchange3d.com/cubecart/images/uploads/aff186/No_U_Turn.jpg"
 <Multi_key><p><i><c><n><g><o><v> : "http://r-img.fotki.yandex.ru/get/3114/goodseo.0/0_2e17_783932a1_L"
-<Multi_key><p><i><c><c><b> : "http://dump.bitcheese.net/images/ocyxuko/crutch_bike.jpeg"
 #<Multi_key><Cyrillic_te><Cyrillic_ef> : "ТЕХНОФАШИЗМ"
 <Multi_key><n><a> : "ТЕХНОФАШИЗМ"
 
