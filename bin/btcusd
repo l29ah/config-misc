@@ -1,2 +1,2 @@
 #!/bin/sh
-curl -s https://www.bitstamp.net/api/ticker/ | jq -r '.last'
+exec moneyconv "$(curl -sS https://api.bitfinex.com/v1/pubticker/btcusd | jq -r '.mid')" "$@"
