@@ -1,3 +1,4 @@
 .xsession.local
 .vim/undo
 .viminf*
+*.sw?
