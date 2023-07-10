@@ -13,6 +13,7 @@ Rxvt*preeditType: OnTheSpot
 Rxvt*inputMethod: uim
 Rxvt*perl-ext: default,selection
 Rxvt*saveLines: 10000
+Rxvt*urgentOnBell: True
 !Rxvt*color0:			black
 !Rxvt*color1:			#B00000
 !Rxvt*color2:			green4
