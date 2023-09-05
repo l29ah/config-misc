@@ -41,5 +41,8 @@ osd-font=Arial Unicode MS
 # control it via json-rpc
 input-ipc-server=~~/socket
 
+# proper --shuffle
+directory-mode=recursive
+
 # microlabs m-890
 #af=equalizer=f=300:t=h:width=700:g=-10,equalizer=f=1000:t=h:width=2000:g=-5
