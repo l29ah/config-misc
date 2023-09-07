@@ -4,6 +4,8 @@ setopt appendhistory extendedglob notify
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/l29ah/.zshrc'
 
+zmodload zsh/mathfunc
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
