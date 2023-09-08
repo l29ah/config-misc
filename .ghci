@@ -25,8 +25,8 @@ import Data.Traversable
 import Data.Word
 import qualified GHC.Generics as GHC
 import Numeric
---import Text.Printf
-import GHC.TypeLits.Printf
+import Text.Printf
+--import GHC.TypeLits.Printf
 
 --unroll = reverse . unfoldr step where step 0 = Nothing; step i = Just (fromIntegral i, i `shiftR` 8)
 hex x = showHex x []
