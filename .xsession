@@ -36,7 +36,7 @@ dunst &
 #LANG=ru_RU.UTF-8 conky -q -d
 urxvt -title dzencontent -e dzencontent &
 urxvt -title pinger -e pinger &
-urxvt -title atop -e sudo htop &
+urxvt -title atop -e sudo btop &
 urxvt -title syslog -e sudo tail -Fn 400 /var/log/everything/current &
 #unclutter -idle 3 -jitter 1 &
 
