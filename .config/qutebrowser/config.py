@@ -7,6 +7,8 @@ c.session.lazy_restore = True
 c.content.autoplay = False
 
 c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.increase_text_contrast = True
+c.colors.webpage.darkmode.policy.images = 'never'
 
 c.url.start_pages = 'about:blank'
 c.url.default_page = 'about:blank'
