@@ -2,8 +2,9 @@
 	# https://blog.filippo.io/git-fixup-amending-an-older-commit/
 	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
 [user]
-	email = zl29ah@gmail.com
+	email = l29ah@riseup.net
 	name = Sergey Alirzaev
+	signingkey = 0xC1FD909980E93558
 [push]
 	default = simple
 [color]
