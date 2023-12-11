@@ -6,7 +6,7 @@ if [ -e /sys/devices/platform/smapi ]; then	# older thinkpads
 		*) case $(cat /sys/devices/platform/smapi/BAT0/barcoding) in
 			1ZFBM9851LX) r=$((r * 7 / 10));;
 		esac
-		echo $r;;
+		echo "$r";;
 	esac
 else
 	batpath=/sys/class/power_supply/BAT0
@@ -19,7 +19,11 @@ else
 			else
 				# coreboot on X230
 				# FIXME account for energy
-				echo "$(cat $batpath/charge_now) * 60 / $(cat $batpath/current_now)" | bc 2>/dev/null
+				if grep -q 0 "$batpath/current_now"; then
+					echo -1
+				else
+					echo "$(cat $batpath/charge_now) * 60 / $(cat $batpath/current_now)" | bc 2>/dev/null
+				fi
 			fi
 			;;
 	esac
