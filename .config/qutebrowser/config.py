@@ -8,6 +8,9 @@ c.content.autoplay = False
 
 c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.policy.images = 'never'
+# proper blacks
+c.colors.webpage.darkmode.algorithm = 'lightness-hsl'
+c.colors.webpage.darkmode.contrast = 0.5
 
 c.url.start_pages = 'about:blank'
 c.url.default_page = 'about:blank'
