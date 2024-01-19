@@ -1,4 +1,4 @@
 #!/bin/bash
-setxkbmap -layout us,ru -variant ,typewriter -option grp:caps_toggle,grp_led:caps,terminate:ctrl_alt_bksp
+setxkbmap -layout 'us,ru(typewriter)' -option grp:caps_toggle,grp_led:caps,terminate:ctrl_alt_bksp
 xmodmap ~/.xmodmaprc
 xset r rate 225 50
