@@ -20,6 +20,7 @@ import qualified Data.Map as M
 import Data.Maybe
 import Data.Proxy
 import Data.Semigroup
+import Data.Text (Text)
 import qualified Data.Text as T
 import Data.Traversable
 import Data.Word
