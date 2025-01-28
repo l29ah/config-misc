@@ -48,17 +48,15 @@ au VimEnter * RainbowParenthesesLoadSquare
 au VimEnter * RainbowParenthesesLoadBraces
 let g:rbpt_colorpairs = [
 	\ ['brown',       'RoyalBlue3'],
-	\ ['Darkblue',    'SeaGreen3'],
-	\ ['darkgray',    'DarkOrchid3'],
-	\ ['darkgreen',   'firebrick3'],
 	\ ['darkcyan',    'RoyalBlue3'],
+	\ ['darkgray',    'DarkOrchid3'],
+	\ ['green',       'yellow1'],
 	\ ['darkred',     'SeaGreen3'],
 	\ ['darkmagenta', 'DarkOrchid3'],
 	\ ['brown',       'firebrick3'],
 	\ ['gray',        'RoyalBlue3'],
 	\ ['darkmagenta', 'DarkOrchid3'],
-	\ ['Darkblue',    'firebrick3'],
-	\ ['darkgreen',   'RoyalBlue3'],
+	\ ['green',       'yellow1'],
 	\ ['darkcyan',    'SeaGreen3'],
 	\ ['red',         'firebrick3'],
 	\ ]
