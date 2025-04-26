@@ -28,6 +28,7 @@ autocmd FileType text setlocal textwidth=0
 " Ledger ft
 "au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
 autocmd FileType ledger let b:SuperTabDisabled = 1
+autocmd FileType ledger setlocal ignorecase smartcase
 
 set list listchars=tab:»\ ,trail:·
 
